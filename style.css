@@ -1,0 +1,625 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(asset/header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow:hidden;
+}
+/* works with navbar */
+
+nav{
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+}
+nav li{
+    list-style: none;
+}
+nav a{
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+nav .left ul li a:hover{
+    color: tomato;
+}
+
+nav .left{
+    flex-basis: 65%;
+}
+nav .left ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .left ul li{
+    margin: 0 0.5rem;
+}
+
+nav .right{
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .right ul{
+    display: flex;
+}
+nav .login{
+    margin-right: 2rem;
+}
+nav .right a{
+    font-size: 1.2rem;
+}
+nav .right li{
+    margin: 0 0.3rem;
+}
+
+
+/* in into header  */
+
+.about-header{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    width: 100%;
+    transition: 0.25s;
+}
+.about-header h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color:tomato;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.about-header p{
+    color:white;
+    font-size: 1.1rem;
+    margin: 0.5rem 0rem;
+}
+#icon{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+    z-index: 2;
+}
+#icon:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:760px){
+    nav{
+        width: 40%;
+        height: 100vh;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transition: 0.3s;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav .right{
+        flex-direction: column;
+    }
+    nav .right ul{
+        flex-direction: row;
+    }
+   
+    #icon {
+        display: block;
+    }
+    nav .left ul li{
+        margin-top: 0.5rem;
+    }
+    nav .right {
+       justify-content: flex-start;
+    }
+}
+
+.addNav{
+    left: 0;
+}
+.ab-hd-rs{
+    left: 90%;
+}
+ button{
+    text-decoration:none;
+    font-size: 1.3rem;
+    padding:0.8rem;
+    background:tomato;
+    color: white;
+    text-transform: uppercase;
+    margin: 1rem 0.5rem;
+    outline: 1px solid white;
+    border:none;
+    transition: 0.3s;
+}
+ button:hover{
+    background:rgba(0, 0, 0, 0.7);
+    color: red;
+    cursor: pointer;
+}
+
+/* blog section starts here */
+
+#blog{
+    background:rgb(209, 206, 206);
+    padding: 2rem;
+    width: 100%;
+}
+#blog h3, #service h3, #foods h3, #about-food h3, #contact-us h3{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    padding: 0.5rem;
+    margin:1rem 0rem;
+    text-align:center;
+    color: tomato;
+}
+#blog .d-flex{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}   
+#blog img{
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+}
+#blog .d-flex .d-element{
+    width: 350px;
+    height: auto;
+    background:white;
+    margin: 1rem 0.5rem;
+    padding: 0.2rem;
+}
+#blog .d-element .post-section{
+    padding: 0.5rem;
+}
+#blog .post-section .tag{
+    display: flex;
+    justify-content: space-between;
+}
+#blog .post-section .tag p{
+    font-size: 0.8rem;
+    opacity: 0.5;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+#blog .post-section h3{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: black;
+    font-weight: 400;
+    text-align: left;
+}
+#blog .post-section p{
+    opacity: 0.6;
+    font-size: 1.1rem;
+}
+#blog button{
+    margin: 1rem auto;
+    display: block;
+    padding: 0.5rem;
+}
+
+/* service section starts here  */
+#service{
+    padding: 2rem;
+    background: rgb(212, 216, 216);
+}
+#service .service-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#service  .service-items{
+    text-align: center;
+    background: white;
+    margin: 1rem 0.5rem;
+    flex: 1;
+    padding: 0.5rem;
+}
+@media screen and (max-width:992px) {
+    #service .service-items{
+        flex-basis: 45%;
+    }
+}
+@media screen and (max-width:768px) {
+    #service .service-items{
+        flex-basis:98%;
+    }
+}
+.service-items i{
+    padding: 1.5rem;
+    background:tomato;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: white;
+    margin: 1rem 0rem;
+}
+.service-items h4{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0.5rem 0rem;
+    font-weight: 700;
+}
+.service-items p{
+    opacity: 0.5;
+}
+.service-items button{
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* foods section starts here  */
+#foods{
+    padding: 2rem;
+    background: white;
+}
+
+
+.food-itmes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.food-itmes .item-box{
+    margin: 0.5rem;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+@media screen and (max-width:768px) {
+    .food-itmes .item-box{
+        width: 280px;
+        height: 280px;
+    }
+}
+.food-itmes .item-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+}
+.food-itmes .item-box .text{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: 0.3s;
+    display: grid;
+    place-content: center;
+}
+.text h4, .text p{
+    color: white;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+}
+.food-itmes .item-box button{
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+.food-itmes .item-box:hover > .text{
+    top: 0;
+}
+
+
+/* about food section starts here  */
+#about-food{
+    padding: 2rem;
+    background: salmon;
+}
+#about-food h3{
+    color: white;
+}
+#about-food .about-food-container{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+#about-food .about-food-container .about-food-img{
+    flex-basis: 58%;
+    text-align: center;
+    padding: 0.5rem;
+}
+#about-food .about-food-container .about-food-text{
+    flex-basis: 40%;
+    padding: 0.5rem;
+    margin: 1rem 0rem;
+}
+@media screen and (max-width:768px) {
+    #about-food .about-food-container .about-food-img{
+        flex-basis: 100%;
+    }
+    #about-food .about-food-container .about-food-text{
+        flex-basis: 100%;
+    }
+}
+.about-food-text h4{
+    text-align: left;
+    color:white;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 0.5rem 0rem;
+}
+.about-food-text p{
+    text-align: justify;
+    color: white;
+    opacity: 0.5;
+}
+.about-food-text button{
+    background: black;
+    color: red;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+.about-food-text button:hover{
+    background: brown;
+    color: white;
+}
+
+/* works section starts here  */
+
+#works{
+    background-image: url(asset/works.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#works .works-back-blur{
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+#works h3{
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-align: center;
+}
+#works .works-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: .5rem;
+    margin: 0.5rem 0rem;
+}
+.works-container .works-items{
+    width: 10rem;
+    height: 10rem;
+    background:rgba(0, 0, 0, 0.5);
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.works-container .works-items p{
+    color:tomato;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+}
+
+/* contact us section starts here  */
+#contact-us{
+    padding: 1rem;
+}
+#contact-us .contact-us-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+#contact-us .contact-us-text{
+    flex-basis:40%;
+}
+#contact-us .contact-us-map{
+    flex-basis: 58%;
+}
+@media screen and (max-width:768px) {
+    #contact-us .contact-us-text{
+        flex-basis:100%;
+        text-align: center;
+    }
+    #contact-us .contact-us-map{
+        flex-basis: 100%;
+    }
+}
+#contact-us h3{
+    position: relative;
+}
+#contact-us h3::after{
+    content: "";
+    position: absolute;
+    width: 8rem;
+    height: 2px;
+    background-color: tomato;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+} 
+#contact-us .contact-us-text .contact-us-text-item{
+    padding: 0.5rem;
+    margin:1rem 2rem;
+}  
+#contact-us .contact-us-text i{
+    background-color: #27f;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+}
+#contact-us .contact-us-text h5{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: tomato;
+    display: inline-block;
+}
+#contact-us .contact-us-text p{
+ font-size: 1.2rem;
+ letter-spacing: 1px;
+ font-weight: 700;
+ color: #27f;   
+ margin-left: 2.5rem;
+}
+
+footer{
+    position: relative;
+    background-color: black;
+    margin: 1rem 0rem;
+}
+ .scroll{
+    background-color: tomato;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    bottom: 1rem;
+    right:1rem;
+    display: grid;
+    place-items:center;
+    border-radius: 50%;
+    
+}
+.scroll:hover{
+    cursor: pointer;
+}
+footer h3{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: white;
+}
+footer .others{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#footer .others .about-us{
+    flex-basis: 31%;
+    margin: 1rem 0.5rem;
+    padding:0.5rem;
+}
+#footer .others .follow-us{
+    flex-basis: 31%;
+    margin: 1rem 0.5rem;
+    padding:0.5rem;
+}
+
+#footer .others .quick-link{
+    flex-basis: 31%;
+    margin:1rem 0.5rem;
+    text-align: center;
+}
+@media screen and (max-width:768px) {
+    #footer .others .about-us{
+        flex-basis: 100%;
+        text-align:center;
+    }
+    #footer .others .follow-us{
+        flex-basis: 100%;
+        text-align:center;
+    }
+    
+    #footer .others .quick-link{
+        flex-basis: 100%;
+        text-align:center;
+    }
+}
+#footer .others h4{
+    color: white;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    margin: 2rem 0rem;
+}
+.others h4::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background: tomato;
+    margin: 0.5rem 0rem;
+}
+
+.others .about-us p{
+    color: grey;
+}
+.others .about-us button{
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+.others .follow-items-own{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0rem;
+}
+.follow-items-own i{
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+    color: white;
+}
+.follow-items-own p{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: tomato;
+}
+.others .quick-link li{
+    list-style: none;
+    margin: 0.14rem 0rem;
+}
+.others .quick-link a{
+    text-decoration: none;
+    color: tomato;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+.others .quick-link a:hover, .follow-items-own i:hover{
+    color: chartreuse;
+    cursor: pointer;
+  
+}
